@@ -1,18 +1,5 @@
-<!doctype html>
-<html>
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="{{ asset('output.css') }}" rel="stylesheet">
-    <link href="{{ asset('main.css') }}" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
-        rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
-</head>
-
-<body>
+@extends('front.layouts.app')
+@section('content')
     <main
         class="bg-[#FAFAFA] max-w-[640px] mx-auto min-h-screen relative flex flex-col has-[#CTA-nav]:pb-[120px] has-[#Bottom-nav]:pb-[120px]">
         <div id="Top-nav" class="flex items-center justify-between px-4 pt-5 absolute top-0 z-10 w-full">
@@ -35,8 +22,7 @@
 
                     @foreach ($carStore->photos as $photo)
                         <div class="swiper-slide !w-[310px] !h-[350px] flex shrink-0 overflow-hidden">
-                            <img src="{{ Storage::url($photo->photo) }}" class="object-cover w-full h-full"
-                                alt="thumbnail">
+                            <img src="{{ Storage::url($photo->photo) }}" class="object-cover w-full h-full" alt="thumbnail">
                         </div>
                     @endforeach
 
@@ -59,8 +45,9 @@
                     <div class="w-[18px] h-[18px] flex shrink-0">
                         <img src="{{ asset('assets/images/icons/Star 1.svg') }}" alt="star">
                     </div>
-                    <p class="text-sm leading-[21px] text-[#909DBF]"><span
-                            class="font-semibold text-[#270738]">4.8</span> <span>(145,394)</span></p>
+                    <p class="text-sm leading-[21px] text-[#909DBF]"><span class="font-semibold text-[#270738]">4.8</span>
+                        <span>(145,394)</span>
+                    </p>
                 </div>
             </div>
         </section>
@@ -140,24 +127,19 @@
                                         <p class="font-semibold text-sm leading-[21px]">Sara Putri</p>
                                         <div class="flex shrink-0">
                                             <div class="w-[14px] h-[14px] flex shrink-0">
-                                                <img src="{{ asset('assets/images/icons/Star 1.svg') }}"
-                                                    alt="star">
+                                                <img src="{{ asset('assets/images/icons/Star 1.svg') }}" alt="star">
                                             </div>
                                             <div class="w-[14px] h-[14px] flex shrink-0">
-                                                <img src="{{ asset('assets/images/icons/Star 1.svg') }}"
-                                                    alt="star">
+                                                <img src="{{ asset('assets/images/icons/Star 1.svg') }}" alt="star">
                                             </div>
                                             <div class="w-[14px] h-[14px] flex shrink-0">
-                                                <img src="{{ asset('assets/images/icons/Star 1.svg') }}"
-                                                    alt="star">
+                                                <img src="{{ asset('assets/images/icons/Star 1.svg') }}" alt="star">
                                             </div>
                                             <div class="w-[14px] h-[14px] flex shrink-0">
-                                                <img src="{{ asset('assets/images/icons/Star 1.svg') }}"
-                                                    alt="star">
+                                                <img src="{{ asset('assets/images/icons/Star 1.svg') }}" alt="star">
                                             </div>
                                             <div class="w-[14px] h-[14px] flex shrink-0">
-                                                <img src="{{ asset('assets/images/icons/Star 1.svg') }}"
-                                                    alt="star">
+                                                <img src="{{ asset('assets/images/icons/Star 1.svg') }}" alt="star">
                                             </div>
                                         </div>
                                     </div>
@@ -176,24 +158,19 @@
                                         <p class="font-semibold text-sm leading-[21px]">Sara Putri</p>
                                         <div class="flex shrink-0">
                                             <div class="w-[14px] h-[14px] flex shrink-0">
-                                                <img src="{{ asset('assets/images/icons/Star 1.svg') }}"
-                                                    alt="star">
+                                                <img src="{{ asset('assets/images/icons/Star 1.svg') }}" alt="star">
                                             </div>
                                             <div class="w-[14px] h-[14px] flex shrink-0">
-                                                <img src="{{ asset('assets/images/icons/Star 1.svg') }}"
-                                                    alt="star">
+                                                <img src="{{ asset('assets/images/icons/Star 1.svg') }}" alt="star">
                                             </div>
                                             <div class="w-[14px] h-[14px] flex shrink-0">
-                                                <img src="{{ asset('assets/images/icons/Star 1.svg') }}"
-                                                    alt="star">
+                                                <img src="{{ asset('assets/images/icons/Star 1.svg') }}" alt="star">
                                             </div>
                                             <div class="w-[14px] h-[14px] flex shrink-0">
-                                                <img src="{{ asset('assets/images/icons/Star 1.svg') }}"
-                                                    alt="star">
+                                                <img src="{{ asset('assets/images/icons/Star 1.svg') }}" alt="star">
                                             </div>
                                             <div class="w-[14px] h-[14px] flex shrink-0">
-                                                <img src="{{ asset('assets/images/icons/Star 1.svg') }}"
-                                                    alt="star">
+                                                <img src="{{ asset('assets/images/icons/Star 1.svg') }}" alt="star">
                                             </div>
                                         </div>
                                     </div>
@@ -212,24 +189,19 @@
                                         <p class="font-semibold text-sm leading-[21px]">Sara Putri</p>
                                         <div class="flex shrink-0">
                                             <div class="w-[14px] h-[14px] flex shrink-0">
-                                                <img src="{{ asset('assets/images/icons/Star 1.svg') }}"
-                                                    alt="star">
+                                                <img src="{{ asset('assets/images/icons/Star 1.svg') }}" alt="star">
                                             </div>
                                             <div class="w-[14px] h-[14px] flex shrink-0">
-                                                <img src="{{ asset('assets/images/icons/Star 1.svg') }}"
-                                                    alt="star">
+                                                <img src="{{ asset('assets/images/icons/Star 1.svg') }}" alt="star">
                                             </div>
                                             <div class="w-[14px] h-[14px] flex shrink-0">
-                                                <img src="{{ asset('assets/images/icons/Star 1.svg') }}"
-                                                    alt="star">
+                                                <img src="{{ asset('assets/images/icons/Star 1.svg') }}" alt="star">
                                             </div>
                                             <div class="w-[14px] h-[14px] flex shrink-0">
-                                                <img src="{{ asset('assets/images/icons/Star 1.svg') }}"
-                                                    alt="star">
+                                                <img src="{{ asset('assets/images/icons/Star 1.svg') }}" alt="star">
                                             </div>
                                             <div class="w-[14px] h-[14px] flex shrink-0">
-                                                <img src="{{ asset('assets/images/icons/Star 1.svg') }}"
-                                                    alt="star">
+                                                <img src="{{ asset('assets/images/icons/Star 1.svg') }}" alt="star">
                                             </div>
                                         </div>
                                     </div>
@@ -248,24 +220,19 @@
                                         <p class="font-semibold text-sm leading-[21px]">Sara Putri</p>
                                         <div class="flex shrink-0">
                                             <div class="w-[14px] h-[14px] flex shrink-0">
-                                                <img src="{{ asset('assets/images/icons/Star 1.svg') }}"
-                                                    alt="star">
+                                                <img src="{{ asset('assets/images/icons/Star 1.svg') }}" alt="star">
                                             </div>
                                             <div class="w-[14px] h-[14px] flex shrink-0">
-                                                <img src="{{ asset('assets/images/icons/Star 1.svg') }}"
-                                                    alt="star">
+                                                <img src="{{ asset('assets/images/icons/Star 1.svg') }}" alt="star">
                                             </div>
                                             <div class="w-[14px] h-[14px] flex shrink-0">
-                                                <img src="{{ asset('assets/images/icons/Star 1.svg') }}"
-                                                    alt="star">
+                                                <img src="{{ asset('assets/images/icons/Star 1.svg') }}" alt="star">
                                             </div>
                                             <div class="w-[14px] h-[14px] flex shrink-0">
-                                                <img src="{{ asset('assets/images/icons/Star 1.svg') }}"
-                                                    alt="star">
+                                                <img src="{{ asset('assets/images/icons/Star 1.svg') }}" alt="star">
                                             </div>
                                             <div class="w-[14px] h-[14px] flex shrink-0">
-                                                <img src="{{ asset('assets/images/icons/Star 1.svg') }}"
-                                                    alt="star">
+                                                <img src="{{ asset('assets/images/icons/Star 1.svg') }}" alt="star">
                                             </div>
                                         </div>
                                     </div>
@@ -307,7 +274,8 @@
         <div id="CTA-nav"
             class="fixed bottom-0 w-full max-w-[640px] mx-auto border-t border-[#E9E8ED] flex items-center justify-between p-[16px_24px] bg-white z-20">
             <div class="flex flex-col gap-[2px]">
-                <p class="font-bold text-xl leading-[30px]">Rp {{ number_format($carService->price, 0), ',', '.' }}
+                <p class="font-bold text-xl leading-[30px]">
+                    Rp {{ number_format($carService->price, 0, ',', '.') }}
                 </p>
                 <p class="text-sm leading-[21px] text-[#909DBF]">{{ $carService->duration_in_hour }} Hours</p>
             </div>
@@ -330,8 +298,7 @@
             class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-full max-h-full bg-[#01031090]">
             <div class="relative p-4 px-9 w-full max-w-2xl max-h-full">
                 <!-- Modal content -->
-                <div
-                    class="bg-white max-w-[320px] mx-auto flex flex-col h-fit rounded-[20px] pb-4 gap-4 overflow-hidden">
+                <div class="bg-white max-w-[320px] mx-auto flex flex-col h-fit rounded-[20px] pb-4 gap-4 overflow-hidden">
                     <div class="w-full h-[150px] flex shrink-0">
                         <img src="{{ Storage::url($carService->photo) }}" class="w-full h-full object-cover"
                             alt="thumbnail">
@@ -349,19 +316,22 @@
                         <p class="leading-[28px]">
                             {{ $carService->about }}
                         </p>
-                        <button
-                            class="rounded-full border border-[#E9E8ED] p-[12px_16px] bg-white w-full font-semibold"
+                        <button class="rounded-full border border-[#E9E8ED] p-[12px_16px] bg-white w-full font-semibold"
                             data-modal-hide="default-modal">Close Details</button>
                     </div>
                 </div>
             </div>
         </div>
     </main>
+@endsection
 
+@push('after-styles')
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+@endpush
 
+@push('after-scripts')
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
     <script src=" {{ asset('customjs/details.js') }}"></script>
-</body>
-
-</html>
+@endpush
