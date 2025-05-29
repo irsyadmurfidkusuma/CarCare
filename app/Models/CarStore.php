@@ -58,4 +58,9 @@ class CarStore extends Model
     {
         return $this->belongsTo(BookingTransaction::class, 'car_store_id');
     }
+
+    public function user(): BelongsTo
+    {
+        return $this->belongsTo(User::class, 'id_user');
+    }
 }

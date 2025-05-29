@@ -31,6 +31,12 @@ class CarStoreResource extends Resource
                     ->required()
                     ->maxLength(255),
 
+                Forms\Components\Select::make('user_id')
+                    ->relationship('user', 'name')
+                    ->searchable()
+                    ->preload()
+                    ->required(),
+                    
                 Forms\Components\TextInput::make('cs_name')
                     ->helperText('Masukan nama pemilik')
                     ->required()
@@ -53,7 +59,8 @@ class CarStoreResource extends Resource
                         false =>  'Available'
                     ])
                     ->required(), 
-
+                    
+                
                 Forms\Components\Select::make('city_id')
                     ->relationship('city', 'name')
                     ->searchable()
